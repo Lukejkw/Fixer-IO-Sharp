@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CurrencySharp")]
+[assembly: AssemblyTitle("Fixer-IO-Sharp")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CurrencySharp")]
+[assembly: AssemblyProduct("Fixer-IO-Sharp")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("04ff37c8-4d64-4822-a3e1-e2aa05c09526")]
+[assembly: Guid("3461cc7f-ba37-4605-b0fe-999dc6eadae5")]
 
 // Version information for an assembly consists of the following four values:
 //
