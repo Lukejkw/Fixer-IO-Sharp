@@ -1,4 +1,5 @@
 ﻿using CurrencySharp;
+using System;
 
 namespace Fixer_IO_Sharp
 {
@@ -7,7 +8,8 @@ namespace Fixer_IO_Sharp
         string BaseCurrency { get; set; }
         string[] Symbols { get; set; }
 
-        CurrencyResult GetCurrenciesForDate(int year, int month, int day);
+        CurrencyResult GetCurrenciesForDate(DateTime date);
+
         CurrencyResult GetLatest();
     }
 }

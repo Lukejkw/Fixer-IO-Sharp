@@ -3,6 +3,7 @@ using RestSharp;
 using System;
 using System.Linq;
 using System.Net;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Fixer_IO_Sharp
 {
@@ -59,21 +60,20 @@ namespace Fixer_IO_Sharp
         /// <summary>
         /// Gets the currency for a given day in history. Only dates from 1999 are supported
         /// </summary>
-        /// <param name="year">Year</param>
-        /// <param name="month">Month</param>
-        /// <param name="day">Day</param>
+        /// <param name="date">The date to get rates for</param>
         /// <returns></returns>
-        public CurrencyResult GetCurrenciesForDate(int year, int month, int day)
+        public CurrencyResult GetCurrenciesForDate(DateTime date)
         {
-            if (year < 1999)
+            if (date < new DateTime(1999, 1, 1))
                 throw new NotSupportedException("Only currency information from 1999 is available");
 
-            var request = new RestRequest($"{year}-{month}-{day}", Method.GET);
+            var request = new RestRequest(date.ToString("yyyy-MM-dd"), Method.GET);
             return Execute<CurrencyResult>(request);
         }
 
         private T Execute<T>(IRestRequest request) where T : new()
         {
+            request.AddQueryParameter("base", BaseCurrency);
             if (Symbols != null && Symbols.Any())
             {
                 request.AddQueryParameter("symbols", string.Join(",", Symbols));
