@@ -1,5 +1,7 @@
 #Fixer-IO-Sharp
 
+[![Build status](https://ci.appveyor.com/api/projects/status/c3d877jpnadweg1f?svg=true)](https://ci.appveyor.com/project/Lukejkw/fixer-io-sharp)
+
 Fixer-IO-Sharp is a simple library that allows you to get currency information.
 
 The library is powered by [fixer.io](http://fixer.io/) and currencies are pulled from the [European Central Bank](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/index.en.html)
