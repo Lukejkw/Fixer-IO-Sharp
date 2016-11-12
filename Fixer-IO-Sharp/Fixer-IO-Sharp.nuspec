@@ -8,7 +8,7 @@
     <owners>Luke Warren</owners>
     <licenseUrl>https://github.com/Lukejkw/Fixer-IO-Sharp/blob/master/License.md</licenseUrl>
     <projectUrl>https://github.com/Lukejkw/Fixer-IO-Sharp</projectUrl>
-    <iconUrl></iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/Lukejkw/Fixer-IO-Sharp/master/fixer-io-sharp-logo.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Fixer-IO-Sharp is a simple wrapper library that helps you get currency information for the Euro.</description>
     <releaseNotes>Initial Release</releaseNotes>
