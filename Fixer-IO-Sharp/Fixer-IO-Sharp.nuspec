@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Fixer-IO-Sharp</id>
+    <version>1.0.0</version>
+    <title>A C# based Currency API</title>
+    <authors>Luke Warren</authors>
+    <owners>Luke Warren</owners>
+    <licenseUrl>https://github.com/Lukejkw/Fixer-IO-Sharp/blob/master/License.md</licenseUrl>
+    <projectUrl>https://github.com/Lukejkw/Fixer-IO-Sharp</projectUrl>
+    <iconUrl></iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Fixer-IO-Sharp is a simple wrapper library that helps you get currency information for the Euro.</description>
+    <releaseNotes>Initial Release</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Currency API,Currency,Luke Warren,fixer.io</tags>
+  </metadata>
+</package>

@@ -27,7 +27,7 @@ The below example will set the base currency to US Dollars and will only show ra
 var client = new FixerIOClient()
 {
     BaseCurrency = "USD",
-    Symbols = new[]{ "EUR", "ZAR }
+    Symbols = new[]{ "EUR", "ZAR" }
 };
 
 ```
