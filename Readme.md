@@ -2,7 +2,7 @@
 
 Fixer-IO-Sharp is a simple library that allows you to get currency information.
 
-The library is powered by [fixer.io](http://fixer.io/) and currencies are pulled from [European Central Bank](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/index.en.html)
+The library is powered by [fixer.io](http://fixer.io/) and currencies are pulled from the [European Central Bank](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/index.en.html)
 
 I offer absolutely no warranty for the data return by the API as the data is not my own.
 
@@ -36,7 +36,7 @@ var client = new FixerIOClient()
 
 ``` javascript
 
-var result = client.GetRatesForDate(new DateTime(2010, 01, 01));
+var result = client.GetLatest();
 result.Rates; // Rates (Dictionary<string, decimal>)
 
 ```
