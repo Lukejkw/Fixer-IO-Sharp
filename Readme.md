@@ -1,8 +1,8 @@
 #Fixer-IO-Sharp
 
-Fixer-IO-Sharp is a simple wrapper library that helps you get currency information for the Euro.
+Fixer-IO-Sharp is a simple library that allows you to get currency information.
 
-The library is powered by [http://fixer.io/](fixer.io) and currencies are pulled from [http://www.ecb.europa.eu/stats/exchange/eurofxref/html/index.en.html](European Central Bank)
+The library is powered by [fixer.io](http://fixer.io/) and currencies are pulled from [European Central Bank](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/index.en.html)
 
 I offer absolutely no warranty for the data return by the API as the data is not my own.
 
@@ -58,6 +58,6 @@ Please feel free but first read the docs for the API [http://fixer.io/](fixer.io
 
 Developed by Luke Warren
 
-Blog at [http://lukewarrendev.co.za](lukewarrendev.co.za)
+Blog at [lukewarrendev.co.za](http://lukewarrendev.co.za)
 
-Twitter: [https://twitter.com/@lukejkwarren](@lukejkwarren)
+Twitter: [@lukejkwarren](https://twitter.com/@lukejkwarren)
