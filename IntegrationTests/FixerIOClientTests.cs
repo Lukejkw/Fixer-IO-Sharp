@@ -58,7 +58,7 @@ namespace IntegrationTests
         {
             var sut = new FixerIOClient();
 
-            var result = sut.GetCurrenciesForDate(new DateTime(2010, 01, 01));
+            var result = sut.GetRatesForDate(new DateTime(2010, 01, 01));
 
             Assert.NotNull(result);
             Assert.NotNull(result.Rates);
@@ -75,7 +75,7 @@ namespace IntegrationTests
                 Symbols = new[] { "ZAR", "USD" }
             };
 
-            var result = sut.GetCurrenciesForDate(new DateTime(2010, 01, 01));
+            var result = sut.GetRatesForDate(new DateTime(2010, 01, 01));
 
             Assert.True(result.Rates.Any(r => r.Key != "ZAR" && r.Key != "ZAR"));
         }
@@ -88,7 +88,7 @@ namespace IntegrationTests
                 BaseCurrency = "USD"
             };
 
-            var result = sut.GetCurrenciesForDate(new DateTime(2010, 01, 01));
+            var result = sut.GetRatesForDate(new DateTime(2010, 01, 01));
 
             Assert.NotNull(result);
             Assert.NotNull(result.Rates);

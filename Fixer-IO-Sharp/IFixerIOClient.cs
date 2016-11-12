@@ -8,7 +8,7 @@ namespace Fixer_IO_Sharp
         string BaseCurrency { get; set; }
         string[] Symbols { get; set; }
 
-        CurrencyResult GetCurrenciesForDate(DateTime date);
+        CurrencyResult GetRatesForDate(DateTime date);
 
         CurrencyResult GetLatest();
     }

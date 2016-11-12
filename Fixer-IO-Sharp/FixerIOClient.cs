@@ -3,7 +3,6 @@ using RestSharp;
 using System;
 using System.Linq;
 using System.Net;
-using System.Security.Cryptography.X509Certificates;
 
 namespace Fixer_IO_Sharp
 {
@@ -11,6 +10,7 @@ namespace Fixer_IO_Sharp
     {
         private readonly RestClient _client;
         private string _baseCurrency;
+        private string[] _symbols;
         private const string DefaultBaseCurrency = "EUR";
         private const string BaseUrl = "http://api.fixer.io";
 
@@ -29,10 +29,8 @@ namespace Fixer_IO_Sharp
             }
             set
             {
-                if (value.Length > 3)
-                {
-                    throw new Exception("Invalid Currency Code");
-                }
+                ValidateSymbol(value);
+
                 _baseCurrency = value;
             }
         }
@@ -40,7 +38,22 @@ namespace Fixer_IO_Sharp
         /// <summary>
         /// The symbols you wish to restrict the result set to.
         /// </summary>
-        public string[] Symbols { get; set; }
+        public string[] Symbols
+        {
+            get
+            {
+                return _symbols;
+            }
+            set
+            {
+                foreach (var symbol in value)
+                {
+                    ValidateSymbol(symbol);
+                }
+
+                _symbols = value;
+            }
+        }
 
         public FixerIOClient()
         {
@@ -62,7 +75,7 @@ namespace Fixer_IO_Sharp
         /// </summary>
         /// <param name="date">The date to get rates for</param>
         /// <returns></returns>
-        public CurrencyResult GetCurrenciesForDate(DateTime date)
+        public CurrencyResult GetRatesForDate(DateTime date)
         {
             if (date < new DateTime(1999, 1, 1))
                 throw new NotSupportedException("Only currency information from 1999 is available");
@@ -85,6 +98,25 @@ namespace Fixer_IO_Sharp
                 return response.Data;
             }
             throw new Exception("Could not get CurrencyResult for one or more reasons");
+        }
+
+        private void ValidateSymbol(string symbol)
+        {
+            if (string.IsNullOrWhiteSpace(symbol))
+            {
+                throw new ArgumentNullException(nameof(symbol), "Symbol cannot be null or whitespace.");
+            }
+            if (symbol.Length != 3)
+            {
+                throw new NotSupportedException("Invalid Currency Code");
+            }
+            foreach (char c in symbol)
+            {
+                if (!char.IsLetter(c))
+                {
+                    throw new NotSupportedException("Invalid Currency Code");
+                }
+            }
         }
     }
 }

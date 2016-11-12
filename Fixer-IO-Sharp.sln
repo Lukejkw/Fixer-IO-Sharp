@@ -5,12 +5,17 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E60D8C76-3D4E-4165-9011-ED0DAE0216DD}"
 	ProjectSection(SolutionItems) = preProject
+		License.md = License.md
 		Readme.md = Readme.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fixer-IO-Sharp", "Fixer-IO-Sharp\Fixer-IO-Sharp.csproj", "{3461CC7F-BA37-4605-B0FE-999DC6EADAE5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "IntegrationTests\IntegrationTests.csproj", "{5C5C3CC7-E8C6-41A4-890E-D6D3391198F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{30E42604-3B7A-489C-B604-E31603CA0BE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{883F7DC6-268C-4388-8F18-2AABDA305162}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,8 +31,16 @@ Global
 		{5C5C3CC7-E8C6-41A4-890E-D6D3391198F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C5C3CC7-E8C6-41A4-890E-D6D3391198F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C5C3CC7-E8C6-41A4-890E-D6D3391198F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{883F7DC6-268C-4388-8F18-2AABDA305162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{883F7DC6-268C-4388-8F18-2AABDA305162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{883F7DC6-268C-4388-8F18-2AABDA305162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{883F7DC6-268C-4388-8F18-2AABDA305162}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5C5C3CC7-E8C6-41A4-890E-D6D3391198F2} = {30E42604-3B7A-489C-B604-E31603CA0BE2}
+		{883F7DC6-268C-4388-8F18-2AABDA305162} = {30E42604-3B7A-489C-B604-E31603CA0BE2}
 	EndGlobalSection
 EndGlobal
